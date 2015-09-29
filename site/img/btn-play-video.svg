@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="126px" height="141px" viewBox="0 0 126 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>btn-play-video</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop_C" sketch:type="MSArtboardGroup" transform="translate(-450.000000, -352.000000)">
+            <g id="MainVideo" sketch:type="MSLayerGroup" transform="translate(0.000000, 137.000000)">
+                <g id="btn-play-video" transform="translate(452.000000, 217.000000)" sketch:type="MSShapeGroup">
+                    <path d="M69.6588641,133.996312 C64.8767055,136.759773 57.1262928,136.761505 52.3411359,133.996312 L8.65886413,108.753688 C3.87670552,105.990227 1.98951966e-13,99.2730105 1.70530257e-13,93.7426242 L1.56319402e-13,43.2573758 C1.56319402e-13,37.7304547 3.87370723,31.0115052 8.65886413,28.2463121 L52.3411359,3.00368788 C57.1232945,0.24022737 64.8737072,0.238494753 69.6588641,3.00368788 L113.341136,28.2463121 C118.123294,31.0097726 122,37.7269895 122,43.2573758 L122,93.7426242 C122,99.2695453 118.126293,105.988495 113.341136,108.753688 L69.6588641,133.996312 L69.6588641,133.996312 Z" id="btn-play-video-borde" stroke="#B8E986" stroke-width="4"></path>
+                    <path d="M52,54.5674072 C52,49.0398472 55.6645433,47.1437414 60.1729374,50.3238371 L77.7681881,62.7350374 C82.2819768,65.9189383 82.2765822,71.0848669 77.7681881,74.2649626 L60.1729374,86.6761629 C55.6591487,89.8600638 52,87.9579998 52,82.4325928 L52,54.5674072 L52,54.5674072 Z" id="btn-play-video-ico" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

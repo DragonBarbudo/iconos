@@ -1,0 +1,54 @@
+//- output: index.html, pretty:false
+
+include site/_config.jade
+
++html5
+  +head(title, stylesheets, keywords, description)
+  body(ng-app="IconosApp")
+    +sidebar
+    
+    hr
+    header(style="background-image: url(http://lorempixel.com/1200/400)", data-sr="enter top").bg
+      .container.mainTitle
+        .col8: h1(data-sr="enter bottom wait 300ms") Investigación
+    hr
+    
+    .investigacion
+      .container
+        .col8.push2.col-t10.push-t1.col-m10.push-m1
+          p.small En  
+            span.light ICONOS
+            |  tenemos la responsabilidad social de generar contenido y conocimiento para futuras generaciones, por lo que nuestro plantel de alumnos prepara textos de investigación con temáticas acordes a su plan de estudios.
+          p.small A continuación puedes encontrar algunos de los títulos disponibles para leer un resúmen sobre los documentos.
+          .search
+            label.mainicon(for="searchInvestigacion"): .fa.fa-search
+            input(type="search", placeholder="Buscar resúmen", ng-model="searchInvestigacion")#searchInvestigacion
+    
+    
+    .documentosInv
+      .container
+        - for(var i=0; i<20; i++)
+          .clearfix
+          a(href="#", data-sr).col4.col-t10.push-t1.col-m10.push-m1
+            p.big El terror como experiencia inmersiva
+            p.small.name HERRERA MADRID NATALIA MARÍA
+            p.light.from Licenciatura en Diseño Digital
+            hr
+          a(href="#", data-sr).col4.col-t10.push-t1.col-m10.push-m1
+            p.big Conceptualización, creatividad y diseño de la App Talita Geek, una aplicación para iPad dirigida a niños pequeños.
+            p.small.name ALTAMIRANO MORENO ANDREA
+            p.light.from Licenciatura en Diseño Digital
+            hr
+          a(href="#", data-sr).col4.col-t10.push-t1.col-m10.push-m1
+            p.big Elaboración y animación de un  personaje en 3D para la promoción turística de Metztitlán Hgo.
+            p.small.name ALONSO HERNÁNDEZ BADILLO
+            p.light.from Especialidad en Producción y Postproducción de Animación 3D
+            hr
+
+    
+    hr
+    +footer
+    hr
+
+    +scripts
+    
