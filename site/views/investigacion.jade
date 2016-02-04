@@ -1,0 +1,30 @@
+
+hr
+header(style="background-image: url(files/investigacion.jpg)", data-sr="enter top").bg
+  .container.mainTitle
+    .col8: h1(data-sr="enter bottom wait 300ms") Investigación
+hr
+
+.investigacion
+  .container
+    .col8.push2.col-t10.push-t1.col-m10.push-m1
+      p.small En  
+        span.light ICONOS
+        |  tenemos la responsabilidad social de generar contenido y conocimiento para futuras generaciones, por lo que nuestro plantel de alumnos prepara textos de investigación con temáticas acordes a su plan de estudios.
+      p.small A continuación puedes encontrar algunos de los títulos disponibles para leer un resúmen sobre los documentos.
+      .search
+        label.mainicon(for="searchInvestigacion"): .fa.fa-search
+        input(type="search", placeholder="Buscar resúmen", ng-model="searchInvestigacion")#searchInvestigacion
+
+
+.documentosInv
+  .container
+    div(data-sr, ng-repeat="doc in datos | filter:searchInvestigacion ").col4.col-t10.push-t1.col-m10.push-m1
+      a(ui-sref="documento({documento:doc.id})")
+        p.big {{doc.titulo}}
+        p.small.name {{doc.autor}}
+        p.light.from {{doc.nivel}}
+        hr
+  br
+  br
+      

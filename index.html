@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="IconosApp">
   <head>
     <meta charset="utf-8">
-    <title>ICONOS | Instituto de Investigación en Comunicación y Cultura</title>
+    <!--base(href="/iconos_2015/")-->
+    <title ng-bind="$state.current.stateName + ' | Iconos Instituto'">ICONOS | Instituto de Investigación en Comunicación y Cultura</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/css/swipebox.min.css">
     <link rel="stylesheet" href="site/css/style.css">
   </head>
-  <body ng-app="IconosApp">
+  <base href="/iconos_2015/">
+  <body>
     <div class="btn-burger">
       <div id="openMenu">
         <div data="site/img/iconos.svg" class="svg minilogo"></div>
@@ -22,7 +24,7 @@
       </div>
     </div>
     <div id="menu" class="sidebar">
-      <div class="close"><i class="fa fa-times"></i></div><a href="index.html" class="logo"><img src="site/img/iconos.svg" alt="Iconos"></a>
+      <div class="close"><i class="fa fa-times"></i></div><a ui-sref="home" class="logo"><img src="site/img/iconos.svg" alt="Iconos"></a>
       <div class="hr"></div>
       <nav>
         <ul class="listMain">
@@ -32,13 +34,13 @@
           </li>
           <li><a href="#docentes-y-estudiantes">Docentes y estudiantes</a>
           </li>
-          <li><a href="noticias.html">Noticias</a>
+          <li><a href="noticias.html" ui-sref="noticias">Noticias</a>
           </li>
-          <li><a href="investigacion.html">Investigación</a>
+          <li><a href="investigacion.html" ui-sref="investigacion">Investigación</a>
           </li>
-          <li><a href="galeria-digital.html">Galería digital</a>
+          <li><a href="galeria-digital.html" ui-sref="galeria">Galería digital</a>
           </li>
-          <li><a href="contacto.html">Contacto</a>
+          <li><a href="contacto.html" ui-sref="contacto">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -47,119 +49,66 @@
         <div class="socials"><a href="https://www.youtube.com/user/ICONOSINST?ob=0" target="_blank"><i class="fa fa-youtube"></i></a><a href="https://plus.google.com/+IconosEduMx" target="_blank"><i class="fa fa-google-plus"></i></a><a href="https://twitter.com/iconos_inst" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/iconosinstituto" target="_blank"><i class="fa fa-facebook"></i></a>
         </div>
         <div class="hr"></div>
-        <div class="privacy"><a href="aviso-de-privacidad.html">Aviso de privacidad</a></div>
+        <div class="privacy"><a ui-sref="aviso-de-privacidad">Aviso de privacidad</a></div>
       </div>
     </div>
     <div id="submenu" class="sidebar submenu">
       <nav role="programas-de-estudio" class="sub">
         <div class="submenuTitle">Licenciaturas</div>
         <ul class="listMain">
-          <li><a href="diseno-digital.html">Diseño digital</a>
+          <li><a href="diseno-digital.html" ui-sref="programas({prg:'dd'})">Diseño digital</a>
           </li>
-          <li><a href="comunicacion-digital.html">Comunicación digital</a>
+          <li><a href="comunicacion-digital.html" ui-sref="programas({prg:'cd'})">Comunicación digital</a>
           </li>
         </ul>
         <div class="submenuTitle">Maestrias</div>
         <ul class="listMain">
-          <li><a href="comunicacion-con-medios-virtuales.html">Comunicación con medios virtuales</a>
+          <li><a href="comunicacion-con-medios-virtuales.html" ui-sref="programas({prg:'cmv'})">Comunicación con medios virtuales</a>
           </li>
-          <li><a href="comunicacion-y-lenguajes-visuales.html">Comunicación y lenguajes visuales</a>
+          <li><a href="comunicacion-y-lenguajes-visuales.html" ui-sref="programas({prg:'clv'})">Comunicación y lenguajes visuales</a>
           </li>
-          <li><a href="comunicacion-y-estudios-de-la-cultura.html">Comunicación y estudios de la cultura</a>
+          <li><a href="comunicacion-y-estudios-de-la-cultura.html" ui-sref="programas({prg:'cec'})">Comunicación y estudios de la cultura</a>
           </li>
         </ul>
         <div class="submenuTitle">Especialidades</div>
         <ul class="listMain">
-          <li><a href="diseno-y-gestion-de-sitios-web.html">Diseño y gestión de sitios web</a>
+          <li><a href="diseno-y-gestion-de-sitios-web.html" ui-sref="programas({prg:'dgsw'})">Diseño y gestión de sitios web</a>
           </li>
-          <li><a href="produccion-y-postproduccion-de-animacion-3d.html">Producción y postproducción de animación 3D</a>
+          <li><a href="produccion-y-postproduccion-de-animacion-3d.html" ui-sref="programas({prg:'cppa3d'})">Producción y postproducción de animación 3D</a>
           </li>
-          <li><a href="animacion-e-interactividad-enriquecida.html">Animación e interactividad enriquecida</a>
+          <li><a href="animacion-e-interactividad-enriquecida.html" ui-sref="programas({prg:'aie'})">Animación e interactividad enriquecida</a>
           </li>
-          <li><a href="emprendeduria-y-gestion-de-la-cultura.html">Emprendeduría y gestión de la cultura</a>
+          <li><a href="emprendeduria-y-gestion-de-la-cultura.html" ui-sref="programas({prg:'egc'})">Emprendeduría y gestión de la cultura</a>
           </li>
         </ul>
         <div class="submenuTitle">Doctorado</div>
         <ul class="listMain">
-          <li><a href="estudios-transdisciplinarios-de-la-cultura-y-la-comunicacion.html">Estudios transdisciplinarios de la cultura y la comunicación</a>
+          <li><a href="estudios-transdisciplinarios-de-la-cultura-y-la-comunicacion.html" ui-sref="programas({prg:'etcc'})">Estudios transdisciplinarios de la cultura y la comunicación</a>
           </li>
         </ul>
       </nav>
       <nav role="cursos-y-diplomados" class="sub">
         <div class="submenuTitle">Cursos y diplomados</div>
         <ul class="listMain">
-          <li><a href="educacion-continua.html">Educación continua</a>
+          <li><a href="educacion-continua.html" ui-sref="educacion-continua">Educación continua</a>
           </li>
-          <li><a href="cursos-empresariales.html">Cursos empresariales</a>
+          <li><a href="cursos-empresariales.html" ui-sref="cursos-empresariales">Cursos empresariales</a>
           </li>
         </ul>
       </nav>
       <nav role="docentes-y-estudiantes" class="sub">
         <div class="submenuTitle">Docentes y estudiantes</div>
         <ul class="listMain">
-          <li><a href="nuestros-docentes.html">Nuestros docentes</a>
+          <li><a href="nuestros-docentes.html" ui-sref="nuestros-docentes">Nuestros docentes</a>
           </li>
-          <li><a href="servicios-a-estudiantes.html">Servicios a estudiantes</a>
+          <li><a href="portafolio-de-estudiantes.html" ui-sref="portafolio-de-estudiantes">Portafolio de estudiantes</a>
           </li>
-          <li><a href="biblioteca-digital.html">Biblioteca digital</a>
-          </li>
-          <li><a href="investigacion.html">Investigación</a>
+          <li><a href="biblioteca-digital.html" ui-sref="biblioteca-digital">Biblioteca digital</a>
           </li>
         </ul>
       </nav>
     </div>
-    <hr data-sr>
-    <div data-sr="enter bottom" class="intro-video"><a href="https://www.youtube.com/watch?v=bz6JP3iTPxk" class="box">
-        <div data="site/img/btn-play-video.svg" class="svg"></div></a></div>
-    <hr data-sr>
-    <div data-sr="enter bottom" class="container">
-      <div class="bannerslider">
-        <div class="col8 push1 news first">
-          <div class="slider multiple"><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a></div>
-        </div>
-        <div class="col1">
-          <p class="rotate">Noticias</p>
-        </div>
-        <div class="col8 push2 news">
-          <div class="slider multiple"><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a><a href="noticias.html">
-              <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://lorempixel.com/200/200" data-w="200" data-h="200" class="svg btn"></div></a></div>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div data-sr="enter bottom" class="container">
-      <div class="col5 push1 about">
-        <div data="site/img/iconos.svg" class="svg"></div>
-        <p>Espacio académico dedicado a la inverstigación y la formación en el campo de la cultura y la comunicación.</p><a href="https://www.youtube.com/user/ICONOSINST?ob=0" target="_blank"><i class="fa fa-youtube"></i></a><a href="https://plus.google.com/+IconosEduMx" target="_blank"><i class="fa fa-google-plus"></i></a><a href="https://twitter.com/iconos_inst" target="_blank"><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/iconosinstituto" target="_blank"><i class="fa fa-facebook"></i></a>
-      </div>
-      <div class="col4 push1 col-t10 push-t1 col-m10 push-m1 info">
-        <p class="big">Llámanos</p>
-        <p class="small"> <span class="light">01 55 </span> | 5709 4370 | 57096593 | 57094396</p>
-        <p class="big">Ubícanos</p>
-        <p class="small">Av. <span class="light">Chapultepec 57</span>, 1er y 2do piso, Col. Centro C.P. 06040. <span class="light">México, D.F.</span></p>
-        <p class="big">Nosotros te contactamos</p>
-        <form action="http://dragonbarbudo.com/api/email.php">
-          <input type="hidden" name="_to" value="info@iconos.edu.mx">
-          <input type="hidden" name="_from" value="info@iconos.edu.mx">
-          <input type="hidden" name="_subject" value="Contáctenme iconos / home">
-          <input type="email" placeholder="Coloca tu email" name="email">
-          <button type="submit">
-            <div data="site/img/btn-send.svg" class="svg"></div>
-          </button>
-        </form>
-      </div>
-    </div>
+    <div ui-view> </div>
     <hr>
     <footer>
       <div class="container">
@@ -168,15 +117,22 @@
       </div>
     </footer>
     <hr>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/js/jquery.swipebox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/0.1.10/jquery.scrollify.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/locale/es.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-fittext/4.1.0/ng-FitText.min.js"></script>
+    <script src="site/js/angular-disqus.js"></script>
+    <script src="site/js/angular-marked.js"></script>
     <script src="site/js/script.js"></script>
+    <script src="site/js/controllers.js"></script>
   </body>
 </html>

@@ -1,0 +1,110 @@
+
+<hr>
+<header style="background-image: url(http://lorempixel.com/1200/400)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col10">
+      <h1 data-fittext data-fittext-load-delay="500">{{datos.nombre}}</h1>
+      <h2 data-sr="enter bottom wait 500ms">{{datos.nivel}}</h2>
+    </div>
+  </div>
+</header>
+<hr>
+<div class="container">
+  <div class="col3 col-t12 col-m12">
+    <div class="nextDate">
+      <div class="text">
+        <div class="m">Mayo</div>
+        <div class="d">23</div>
+        <div class="a">2016</div>
+      </div>
+      <div data="site/img/mainPolygon.svg" class="svg"></div>
+      <div class="prox">Próximo inicio</div>
+    </div>
+  </div>
+  <div class="col8 col-t12 col-m12">
+    <div marked="descripcionMD" class="description text"></div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="col12">
+    <div class="buttonsliders">
+      <div>Objetivos particulares</div>
+      <div>Perfil de ingreso</div>
+      <div>Plan de estudios</div>
+      <div>Requisitos de ingreso</div>
+      <div>Solicitar información</div>
+    </div>
+    <div class="slider rvoe">
+      <div>
+        <div marked="objetivosMD" class="text objetivos"></div>
+      </div>
+      <div>
+        <div marked="perfilMD" class="text perfil"></div>
+      </div>
+      <div>
+        <div marked="planMD" class="text plan"></div>
+      </div>
+      <div>
+        <div marked="requisitosMD" class="text requisitos"></div>
+      </div>
+      <div class="info noleftline">
+        <div class="container">
+          <div class="col6 col-t12 col-m12">
+            <p class="big">Llámanos</p>
+            <p class="small"> <span class="light">01 55 </span> | 5709 4370 | 57096593 | 57094396</p>
+            <p class="big">Ubícanos</p>
+            <p class="small">Av. <span class="light">Chapultepec 57</span>, 1er y 2do piso, Col. Centro C.P. 06040. <span class="light">México, D.F.</span></p>
+          </div>
+          <div class="col6 col-t12 col-m12">
+            <p class="big">Nosotros te contactamos</p>
+            <div class="nodesktop notablet nomobile">{{interesados = 'Interesado en ' +datos.nombre}}</div>
+            <form action="http://dragonbarbudo.com/api/email.php" class="container">
+              <input type="hidden" name="_to" value="info@iconos.edu.mx">
+              <input type="hidden" name="_from" value="info@iconos.edu.mx">
+              <input type="hidden" name="_subject" value="Contáctenme iconos / home">
+              <div class="col6">
+                <input type="text" placeholder="Nombre" name="Nombre" class="large">
+                <input type="email" placeholder="Correo electrónico" name="Correo" class="large">
+                <input type="text" placeholder="Información" name="Informacion" ng-model="interesados" class="large">
+              </div>
+              <div class="col6">
+                <input type="text" placeholder="Apellido" name="Apellido" class="large">
+                <input type="text" placeholder="Teléfono" name="Telefono" class="large"><br><br>
+                <label for="moreInfo" class="light">¿Recibir información de ICONOS?</label>
+                <div class="container"></div>
+                <div class="col6">
+                  <input type="radio" name="MasInfo" value="si" id="infosi">
+                  <label for="infosi" class="dark">Sí</label>
+                </div>
+                <div class="col6">
+                  <input type="radio" name="MasInfo" value="no" id="infono">
+                  <label for="infono" class="dark">No</label>
+                </div>
+              </div>
+              <div class="col12">
+                <textarea name="Comentarios" placeholder="Comentarios" class="medium"></textarea>
+                <button type="submit">
+                  <div data="site/img/btn-send.svg" class="svg"></div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="slider multiplebox">
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+  <div><a href="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="box"><img src="http://lorempixel.com/image_output/abstract-q-c-640-480-4.jpg" class="w100"></a></div>
+</div>

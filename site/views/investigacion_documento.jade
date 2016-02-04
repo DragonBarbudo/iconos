@@ -1,0 +1,76 @@
+include ../_config.jade
+
+
+hr
+header(style="background-image: url(files/investigacion.jpg)", data-sr="enter top").bg
+  .container.mainTitle
+    .col12
+      
+      h1(data-fittext, data-fittext-load-delay="500") {{datos.titulo}}
+      h2 {{datos.area}}
+      h2 {{datos.autor}}
+
+hr
+
+.container
+  .col12
+    .description.text.title.light Justificación
+    .description.text(marked="justificacionMD")
+    .description.text.title.light Objetivos
+    .description.text(marked="objetivosMD")
+    .description.text.title.light Hipótesis
+    .description.text(marked="hipotesisMD")
+
+hr
+.container
+  .col12
+    .buttonslidersNota
+      div Comentarios
+      div Solicitar información
+    .slider.nota
+      div 
+        
+        div(disqus="documento")
+        
+      div.info.noleftline
+        .container
+          .col6.col-t12.col-m12
+            p.big Llámanos
+            p.small 
+              span.light 01 55 
+              |  | 5709 4370 | 57096593 | 57094396
+            p.big Ubícanos
+            p.small
+              | Av. 
+              span.light Chapultepec 57
+              | , 1er y 2do piso, Col. Centro C.P. 06040. 
+              span.light México, D.F.
+          .col6.col-t12.col-m12
+            p.big Nosotros te contactamos
+            .nodesktop.notablet.nomobile {{interesados = 'Interesado en documento ' +datos.titulo}}
+            form(action="http://dragonbarbudo.com/api/email.php").container
+              input(type="hidden", name="_to", value="info@iconos.edu.mx")
+              input(type="hidden", name="_from", value="info@iconos.edu.mx")
+              input(type="hidden", name="_subject", value="Contáctenme iconos / home")
+              .col6
+                input(type="text", placeholder="Nombre", name="Nombre").large
+                input(type="email", placeholder="Correo electrónico", name="Correo").large
+                
+                input(type="text", placeholder="Información", name="Informacion", ng-model="interesados").large
+              .col6
+                input(type="text", placeholder="Apellido", name="Apellido").large
+                input(type="text", placeholder="Teléfono", name="Telefono").large
+                br
+                br
+                label(for="moreInfo").light ¿Recibir información de ICONOS?
+                .container
+                .col6
+                  input(type="radio", name="MasInfo", value="si", id="infosi")
+                  label(for="infosi").dark Sí
+                .col6
+                  input(type="radio", name="MasInfo", value="no", id="infono")
+                  label(for="infono").dark No
+              .col12
+                textarea(name="Comentarios", placeholder="Comentarios").medium
+                button(type="submit")
+                  .svg(data="site/img/btn-send.svg")

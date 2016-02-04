@@ -1,0 +1,33 @@
+
+<hr/>
+<header style="background-image: url(files/investigacion.jpg)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col8">
+      <h1 data-sr="enter bottom wait 300ms">Investigación</h1>
+    </div>
+  </div>
+</header>
+<hr/>
+<div class="investigacion">
+  <div class="container">
+    <div class="col8 push2 col-t10 push-t1 col-m10 push-m1">
+      <p class="small">En  <span class="light">ICONOS</span> tenemos la responsabilidad social de generar contenido y conocimiento para futuras generaciones, por lo que nuestro plantel de alumnos prepara textos de investigación con temáticas acordes a su plan de estudios.</p>
+      <p class="small">A continuación puedes encontrar algunos de los títulos disponibles para leer un resúmen sobre los documentos.</p>
+      <div class="search">
+        <label for="searchInvestigacion" class="mainicon">
+          <div class="fa fa-search"></div>
+        </label>
+        <input type="search" placeholder="Buscar resúmen" ng-model="searchInvestigacion" id="searchInvestigacion"/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="documentosInv">
+  <div class="container">
+    <div data-sr="data-sr" ng-repeat="doc in datos | filter:searchInvestigacion " class="col4 col-t10 push-t1 col-m10 push-m1"><a ui-sref="documento({documento:doc.id})">
+        <p class="big">{{doc.titulo}}</p>
+        <p class="small name">{{doc.autor}}</p>
+        <p class="light from">{{doc.nivel}}</p>
+        <hr/></a></div>
+  </div><br/><br/>
+</div>

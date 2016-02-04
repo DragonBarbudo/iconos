@@ -1,0 +1,31 @@
+
+<hr/>
+<header style="background-image: url(http://lorempixel.com/400/400)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col8">
+      <h1 data-sr="enter bottom wait 300ms">Administrador</h1>
+    </div>
+  </div>
+</header>
+<hr/>
+<div class="container">
+  <div class="col2">
+    <select ng-model="selector" ng-change="update()">
+      <option ng-repeat="dato in datos" value="{{dato}}">{{dato}}</option>
+    </select>
+  </div>
+  <div ng-hide="bean==null" class="col10 info">
+    <form ng-submit="submitForm()" class="adminform">
+      <div ng-repeat="(field,val) in bean" ng-hide="{{field == 'id'}} || {{field == 'timestamp'}}" class="field">
+        <textarea name="{{field}}" placeholder="{{field}}" id="{{field}}" ng-model="formulario[field]"></textarea>
+      </div>
+      <div class="field tar">
+        <button type="submit" class="btn">Guardar</button>
+      </div>
+      <div class="field">
+        <input type="text" ng-model="newField" placeholder="Nuevo campo"/>
+        <button type="button" ng-click="addNew()" class="btn">Añadir campo</button>
+      </div>
+    </form>
+  </div>
+</div>

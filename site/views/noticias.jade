@@ -1,0 +1,17 @@
+
+
+hr
+header(style="background-image: url(files/noticias.jpg)", data-sr="enter top").bg
+  .container.mainTitle
+    .col8: h1(data-sr="enter bottom wait 300ms") Noticias
+hr
+
+.newslist
+  .container
+    div(data-sr, ng-repeat="noticia in datos", ng-init="$last ? updateSVG() : null").item.col6.col-t10.push-t1.col-m10.push-m1
+        a(ui-sref="noticia({nota:noticia.id})").container
+          .col4.col-m4.push-m4: .svg(data="site/img/mainPolygon.svg", data-mask="site/img/mainPolygonCenter.svg", data-img="files/noticias/n_{{noticia.id}}.jpg", data-w="200", data-h="200").btn
+          .col8.col-m12
+            p.title {{noticia.titulo}}
+            p.small {{noticia.descripcion}}
+        hr

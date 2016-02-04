@@ -1,0 +1,24 @@
+
+<hr/>
+<header style="background-image: url(files/noticias.jpg)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col8">
+      <h1 data-sr="enter bottom wait 300ms">Noticias</h1>
+    </div>
+  </div>
+</header>
+<hr/>
+<div class="newslist">
+  <div class="container">
+    <div data-sr="data-sr" ng-repeat="noticia in datos" ng-init="$last ? updateSVG() : null" class="item col6 col-t10 push-t1 col-m10 push-m1"><a ui-sref="noticia({nota:noticia.id})" class="container">
+        <div class="col4 col-m4 push-m4">
+          <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="files/noticias/n_{{noticia.id}}.jpg" data-w="200" data-h="200" class="svg btn"></div>
+        </div>
+        <div class="col8 col-m12">
+          <p class="title">{{noticia.titulo}}</p>
+          <p class="small">{{noticia.descripcion}}</p>
+        </div></a>
+      <hr/>
+    </div>
+  </div>
+</div>

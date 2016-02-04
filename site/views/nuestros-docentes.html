@@ -1,0 +1,29 @@
+
+<hr/>
+<header style="background-image: url(files/investigacion.jpg)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col12">
+      <h1>Nuestros docentes</h1>
+    </div>
+  </div>
+</header>
+<hr/>
+<div class="investigacion">
+  <div class="container">
+    <div class="col8 push2 col-t10 push-t1 col-m10 push-m1">
+      <div class="search">
+        <label for="searchInvestigacion" class="mainicon">
+          <div class="fa fa-search"></div>
+        </label>
+        <input type="search" placeholder="Buscar docente" ng-model="searchDoc" id="searchInvestigacion"/>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="documentosInv">
+  <div class="container">
+    <div data-sr="data-sr" ng-repeat="doc in datos | filter:searchDoc " class="col4 col-t10 push-t1 col-m10 push-m1"><a ui-sref="docente({docente:doc.id})">
+        <p class="big">{{doc.nombre}}</p>
+        <hr/></a></div>
+  </div><br/><br/>
+</div>

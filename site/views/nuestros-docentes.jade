@@ -1,0 +1,24 @@
+hr
+header(style="background-image: url(files/investigacion.jpg)", data-sr="enter top").bg
+  .container.mainTitle
+    .col12: h1 Nuestros docentes
+hr
+
+
+.investigacion
+  .container
+    .col8.push2.col-t10.push-t1.col-m10.push-m1
+      .search
+        label.mainicon(for="searchInvestigacion"): .fa.fa-search
+        input(type="search", placeholder="Buscar docente", ng-model="searchDoc")#searchInvestigacion
+
+
+.documentosInv
+  .container
+    div(data-sr, ng-repeat="doc in datos | filter:searchDoc ").col4.col-t10.push-t1.col-m10.push-m1
+      a(ui-sref="docente({docente:doc.id})")
+        p.big {{doc.nombre}}
+        hr
+  br
+  br
+      

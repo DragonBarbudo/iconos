@@ -1,0 +1,44 @@
+
+<hr/>
+<header style="background-image: url(http://lorempixel.com/1200/400)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col8">
+      <h1 data-sr="enter bottom wait 300ms">Galería digital</h1>
+    </div>
+  </div>
+</header>
+<hr/>
+<div class="galleryslider">
+  <div class="container">
+    <div class="col8 push1 gala">
+      <div class="slider multiple"><a ng-repeat=" img in datos | filter:'ins' | limitTo:4 " ng-init="$last ? updateSVG() : null" href="files/galeria/{{img}}" title="Instalaciones" class="box"> 
+          <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://localhost/iconos_2015/files/galeria/{{img}}" data-w="200" data-h="200" class="svg btn"></div></a></div>
+    </div>
+    <div class="col1">
+      <p class="rotate">Instalaciones</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col8 push2 galb">
+      <div class="slider multiple"><a ng-repeat=" img in datos | filter:'ins' " ng-init="$last ? updateSVG() : null" ng-if="$index &gt;=4" href="files/galeria/{{img}}" title="Instalaciones" class="box"> 
+          <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://localhost/iconos_2015/files/galeria/{{img}}" data-w="200" data-h="200" class="svg btn"></div></a></div>
+    </div>
+  </div>
+</div>
+<div class="galleryslider">
+  <div class="container">
+    <div class="col8 push1 gala">
+      <div class="slider multiple"><a ng-repeat=" img in datos | filter:'exp' | limitTo:4 " ng-init="$last ? updateSVG() : null" href="files/galeria/{{img}}" title="Exposiciones" class="box"> 
+          <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://localhost/iconos_2015/files/galeria/{{img}}" data-w="200" data-h="200" class="svg btn"></div></a></div>
+    </div>
+    <div class="col1">
+      <p class="rotate">Exposiciones</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col8 push2 galb">
+      <div class="slider multiple"><a ng-repeat=" img in datos | filter:'exp' " ng-init="$last ? updateSVG() : null" ng-if="$index &gt;=4" href="files/galeria/{{img}}" title="Exposiciones" class="box"> 
+          <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="http://localhost/iconos_2015/files/galeria/{{img}}" data-w="200" data-h="200" class="svg btn"></div></a></div>
+    </div>
+  </div>
+</div>

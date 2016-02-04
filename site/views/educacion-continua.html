@@ -1,0 +1,127 @@
+
+<hr>
+<header style="background-image: url(files/cursos.jpg)" data-sr="enter top" class="bg">
+  <div class="container mainTitle">
+    <div class="col12">     
+      <h1 data-fittext data-fittext-load-delay="500">Educación continua</h1>
+    </div>
+  </div>
+</header>
+<hr>
+<div class="container">
+  <div class="col12">
+    <div class="buttonslidersCursos">
+      <div>Primavera</div>
+      <div>Verano</div>
+      <div>Otoño</div>
+      <div>Invierno</div>
+      <div>Solicitar información</div>
+    </div>
+    <div class="slider cursos">
+      <div class="newslist">
+        <div class="container">
+          <div data-sr ng-repeat="curso in datos | filter:{temporada:'Primavera'}" ng-init="$last ? updateSVG() : null" class="item col6 col-t10 push-t1 col-m10 push-m1"><a ui-sref="curso({curso:curso.id})" class="container">
+              <div class="col4 col-m4 push-m4">
+                <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="files/educacion-continua/n_{{curso.id}}.jpg" data-w="200" data-h="200" class="svg btn"></div>
+              </div>
+              <div class="col8 col-m12">
+                <p class="title">{{curso.nombre}}</p>
+                <p class="small">{{curso.descripcion}}</p>
+                <p class="microdate small light">De <strong datetime="{{curso.fecha_inicio}}" data-moment="MMMM D"> </strong> a <strong datetime="{{curso.fecha_termino}}" data-moment="MMMM D"></strong></p>
+              </div></a>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="newslist">
+        <div class="container">
+          <div data-sr ng-repeat="curso in datos | filter:{temporada:'Verano'}" ng-init="$last ? updateSVG() : null" class="item col6 col-t10 push-t1 col-m10 push-m1"><a ui-sref="curso({curso:curso.id})" class="container">
+              <div class="col4 col-m4 push-m4">
+                <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="files/educacion-continua/n_{{curso.id}}.jpg" data-w="200" data-h="200" class="svg btn"></div>
+              </div>
+              <div class="col8 col-m12">
+                <p class="title">{{curso.nombre}}</p>
+                <p class="small">{{curso.descripcion}}</p>
+                <p class="microdate small light">De <strong datetime="{{curso.fecha_inicio}}" data-moment="MMMM D"> </strong> a <strong datetime="{{curso.fecha_termino}}" data-moment="MMMM D"> </strong></p>
+              </div></a>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="newslist">
+        <div class="container">
+          <div data-sr ng-repeat="curso in datos | filter:{temporada:'Otoño'}" ng-init="$last ? updateSVG() : null" class="item col6 col-t10 push-t1 col-m10 push-m1"><a ui-sref="curso({curso:curso.id})" class="container">
+              <div class="col4 col-m4 push-m4">
+                <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="files/educacion-continua/n_{{curso.id}}.jpg" data-w="200" data-h="200" class="svg btn"></div>
+              </div>
+              <div class="col8 col-m12">
+                <p class="title">{{curso.nombre}}</p>
+                <p class="small">{{curso.descripcion}}</p>
+                <p class="microdate small light">De <strong datetime="{{curso.fecha_inicio}}" data-moment="MMMM D"> </strong> a <strong datetime="{{curso.fecha_termino}}" data-moment="MMMM D"></strong></p>
+              </div></a>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="newslist">
+        <div class="container">
+          <div data-sr ng-repeat="curso in datos | filter:{temporada:'Invierno'}" ng-init="$last ? updateSVG() : null" class="item col6 col-t10 push-t1 col-m10 push-m1"><a ui-sref="curso({curso:curso.id})" class="container">
+              <div class="col4 col-m4 push-m4">
+                <div data="site/img/mainPolygon.svg" data-mask="site/img/mainPolygonCenter.svg" data-img="files/educacion-continua/n_{{curso.id}}.jpg" data-w="200" data-h="200" class="svg btn"></div>
+              </div>
+              <div class="col8 col-m12">
+                <p class="title">{{curso.nombre}}</p>
+                <p class="small">{{curso.descripcion}}</p>
+                <p class="microdate small light">De <strong datetime="{{curso.fecha_inicio}}" data-moment="MMMM D"> </strong> a <strong datetime="{{curso.fecha_termino}}" data-moment="MMMM D"></strong></p>
+              </div></a>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="info noleftline">
+        <div class="container">
+          <div class="col6 col-t12 col-m12">
+            <p class="big">Llámanos</p>
+            <p class="small"> <span class="light">01 55 </span> | 5709 4370 | 57096593 | 57094396</p>
+            <p class="big">Ubícanos</p>
+            <p class="small">Av. <span class="light">Chapultepec 57</span>, 1er y 2do piso, Col. Centro C.P. 06040. <span class="light">México, D.F.</span></p>
+          </div>
+          <div class="col6 col-t12 col-m12">
+            <p class="big">Nosotros te contactamos</p>
+            <div class="nodesktop notablet nomobile">{{interesados = 'Interesado en Educación continua'}}</div>
+            <form action="http://dragonbarbudo.com/api/email.php" class="container">
+              <input type="hidden" name="_to" value="info@iconos.edu.mx">
+              <input type="hidden" name="_from" value="info@iconos.edu.mx">
+              <input type="hidden" name="_subject" value="Contáctenme iconos / home">
+              <div class="col6">
+                <input type="text" placeholder="Nombre" name="Nombre" class="large">
+                <input type="email" placeholder="Correo electrónico" name="Correo" class="large">
+                <input type="text" placeholder="Información" name="Informacion" ng-model="interesados" class="large">
+              </div>
+              <div class="col6">
+                <input type="text" placeholder="Apellido" name="Apellido" class="large">
+                <input type="text" placeholder="Teléfono" name="Telefono" class="large"><br><br>
+                <label for="moreInfo" class="light">¿Recibir información de ICONOS?</label>
+                <div class="container"></div>
+                <div class="col6">
+                  <input type="radio" name="MasInfo" value="si" id="infosi">
+                  <label for="infosi" class="dark">Sí</label>
+                </div>
+                <div class="col6">
+                  <input type="radio" name="MasInfo" value="no" id="infono">
+                  <label for="infono" class="dark">No</label>
+                </div>
+              </div>
+              <div class="col12">
+                <textarea name="Comentarios" placeholder="Comentarios" class="medium"></textarea>
+                <button type="submit">
+                  <div data="site/img/btn-send.svg" class="svg"></div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

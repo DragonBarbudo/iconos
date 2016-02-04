@@ -18,16 +18,24 @@ include ../dw/dw.jade
 
 //- JAVASCRIPTS
 - var javascripts = []
-- javascripts.push('http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js')
 - javascripts.push('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-- javascripts.push('http://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js')
 - javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.1/js/jquery.swipebox.min.js')
 - javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js')
-- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/2.3.2/scrollReveal.min.js')
+- javascripts.push('https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js')
 - javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/scrollify/0.1.10/jquery.scrollify.min.js')
-- javascripts.push('https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js')
 - javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js')
+- javascripts.push('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js')
+
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/locale/es.js')
+- javascripts.push('https://cdnjs.cloudflare.com/ajax/libs/ng-fittext/4.1.0/ng-FitText.min.js')
+- javascripts.push('site/js/angular-disqus.js')
+- javascripts.push('site/js/angular-marked.js')
 - javascripts.push('site/js/script.js') //Main Js
+- javascripts.push('site/js/controllers.js')
 
 //-  MENU
 //- dp(menu, '')
@@ -35,38 +43,38 @@ include ../dw/dw.jade
 - dp(menu, 'Programas de estudio', 'programas-de-estudio', '#', ' ')
 - dp(menu, 'Cursos y diplomados', 'cursos-y-diplomados', '#', ' ')
 - dp(menu, 'Docentes y estudiantes', 'docentes-y-estudiantes', '#', ' ')
-- dp(menu, 'Noticias')
-- dp(menu, 'Investigación')
-- dp(menu, 'Galería digital')
-- dp(menu, 'Contacto')
+- dp(menu, 'Noticias', 0, 0, 0, 0, {'ui-sref':'noticias'})
+- dp(menu, 'Investigación', 0, 0, 0, 0, {'ui-sref':'investigacion'})
+- dp(menu, 'Galería digital', 0, 0, 0, 0, {'ui-sref':'galeria'})
+- dp(menu, 'Contacto', 0, 0, 0, 0, {'ui-sref':'contacto'})
 
 - var menuLic = []
-- dp(menuLic, 'Diseño digital')
-- dp(menuLic, 'Comunicación digital')
+
+- dp(menuLic, 'Diseño digital', 0, 0, 0, 0, {'ui-sref':"programas({prg:'dd'})"})
+- dp(menuLic, 'Comunicación digital',  0, 0, 0, 0, {'ui-sref':"programas({prg:'cd'})"})
 
 - var menuMae = []
-- dp(menuMae, 'Comunicación con medios virtuales')
-- dp(menuMae, 'Comunicación y lenguajes visuales')
-- dp(menuMae, 'Comunicación y estudios de la cultura')
+- dp(menuMae, 'Comunicación con medios virtuales',  0, 0, 0, 0, {'ui-sref':"programas({prg:'cmv'})"})
+- dp(menuMae, 'Comunicación y lenguajes visuales',  0, 0, 0, 0, {'ui-sref':"programas({prg:'clv'})"})
+- dp(menuMae, 'Comunicación y estudios de la cultura',  0, 0, 0, 0, {'ui-sref':"programas({prg:'cec'})"})
 
 - var menuEsp = []
-- dp(menuEsp, 'Diseño y gestión de sitios web')
-- dp(menuEsp, 'Producción y postproducción de animación 3D')
-- dp(menuEsp, 'Animación e interactividad enriquecida')
-- dp(menuEsp, 'Emprendeduría y gestión de la cultura')
+- dp(menuEsp, 'Diseño y gestión de sitios web',  0, 0, 0, 0, {'ui-sref':"programas({prg:'dgsw'})"})
+- dp(menuEsp, 'Producción y postproducción de animación 3D',  0, 0, 0, 0, {'ui-sref':"programas({prg:'cppa3d'})"})
+- dp(menuEsp, 'Animación e interactividad enriquecida',  0, 0, 0, 0, {'ui-sref':"programas({prg:'aie'})"})
+- dp(menuEsp, 'Emprendeduría y gestión de la cultura',  0, 0, 0, 0, {'ui-sref':"programas({prg:'egc'})"})
 
 - var menuDoc = []
-- dp(menuDoc, 'Estudios transdisciplinarios de la cultura y la comunicación')
+- dp(menuDoc, 'Estudios transdisciplinarios de la cultura y la comunicación',  0, 0, 0, 0, {'ui-sref':"programas({prg:'etcc'})"})
 
 - var menuCursos = []
-- dp(menuCursos, 'Educación continua')
-- dp(menuCursos, 'Cursos empresariales')
+- dp(menuCursos, 'Educación continua',  0, 0, 0, 0, {'ui-sref':"educacion-continua"})
+- dp(menuCursos, 'Cursos empresariales',  0, 0, 0, 0, {'ui-sref':"cursos-empresariales"})
 
 - var menuDocentes = []
-- dp(menuDocentes, 'Nuestros docentes')
-- dp(menuDocentes, 'Servicios a estudiantes')
-- dp(menuDocentes, 'Biblioteca digital')
-- dp(menuDocentes, 'Investigación')
+- dp(menuDocentes, 'Nuestros docentes',  0, 0, 0, 0, {'ui-sref':"nuestros-docentes"})
+- dp(menuDocentes, 'Portafolio de estudiantes',  0, 0, 0, 0, {'ui-sref':"portafolio-de-estudiantes"})
+- dp(menuDocentes, 'Biblioteca digital',  0, 0, 0, 0, {'ui-sref':"biblioteca-digital"})
 
 
 mixin sidebar
@@ -76,7 +84,7 @@ mixin sidebar
       .svg(data="site/img/btn-burger.svg").burger
   .sidebar#menu
     .close: i.fa.fa-times
-    a(href="index.html").logo: img(src="site/img/iconos.svg", alt="Iconos")
+    a(ui-sref="home").logo: img(src="site/img/iconos.svg", alt="Iconos")
     .hr
     nav: +menu('', menu) 
     .hr
@@ -84,7 +92,7 @@ mixin sidebar
       .socials
         +socials
       .hr
-      .privacy: a(href="aviso-de-privacidad.html") Aviso de privacidad
+      .privacy: a(ui-sref="aviso-de-privacidad") Aviso de privacidad
   .sidebar.submenu#submenu
     nav.sub(role="programas-de-estudio")
       +subItem('Licenciaturas', menuLic)
@@ -126,8 +134,8 @@ mixin footer
 
 
 
-- function dp(menu, name, slug, pre, suf){ menu.push(sc(name, slug, pre, suf)) }
-- function sc(name, slug, pre, suf){ 
+- function dp(menu, name, slug, pre, suf, Lclass, Cattr){ menu.push(sc(name, slug, pre, suf, Lclass, Cattr)) }
+- function sc(name, slug, pre, suf, Lclass, Cattr){ 
 -  if(!slug){
 -   slug = name.replace(/ |_/g, '-');
 -   slug = slug.replace(/á|_/g, 'a');
@@ -139,5 +147,5 @@ mixin footer
 -   slug = slug.replace(/ñ|_/g, 'n');
 -   slug = slug.toLowerCase();
 -  }
--  return [name, slug, pre, suf]
+-  return [name, slug, pre, suf, Lclass, Cattr] 
 - }

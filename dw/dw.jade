@@ -1,13 +1,14 @@
 mixin html5
   doctype html
-  html(lang="es")
+  html(lang="es", ng-app="IconosApp")
     if block
       block
 
 mixin head(titleTxt, links, keywords, description)
   head
     meta(charset="utf-8")
-    title=titleTxt
+    //base(href="/iconos_2015/")
+    title(ng-bind="$state.current.stateName + ' | Iconos Instituto'")=titleTxt
     meta(name="description" content=description)
     meta(name="keywords" content=keywords)
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -39,7 +40,7 @@ mixin menu(activePage, nav, type, prefix, suffix, linkClass, atts)
         - customSuffix = (n[3] ? n[3] : suffix)
         - customSuffix = (customSuffix==' ' ? "" : customSuffix)
         - customlinkClass = (n[4] ? n[4] : linkClass)
-        - customatts = (n[5] ? n[4] : atts )
+        - customatts = (n[5] ? n[5] : atts )
         +menuListLiA(n[1], n[0], customPrefix, customSuffix, activePage, customlinkClass, customatts)
 
 

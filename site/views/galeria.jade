@@ -1,0 +1,39 @@
+
+hr
+header(style="background-image: url(http://lorempixel.com/1200/400)", data-sr="enter top").bg
+  .container.mainTitle
+    .col8: h1(data-sr="enter bottom wait 300ms") Galería digital
+    
+    
+hr
+
+.galleryslider
+  .container
+    .col8.push1.gala
+      .slider.multiple
+          a(ng-repeat=" img in datos | filter:'ins' | limitTo:4 ", ng-init="$last ? updateSVG() : null", href="files/galeria/{{img}}", title="Instalaciones").box 
+            .svg(data="site/img/mainPolygon.svg", data-mask="site/img/mainPolygonCenter.svg", data-img="http://localhost/iconos_2015/files/galeria/{{img}}", data-w="200", data-h="200").btn
+    .col1
+      p.rotate Instalaciones
+  .container
+    .col8.push2.galb
+      .slider.multiple
+        a(ng-repeat=" img in datos | filter:'ins' ", ng-init="$last ? updateSVG() : null", ng-if="$index >=4", href="files/galeria/{{img}}", title="Instalaciones").box 
+          .svg(data="site/img/mainPolygon.svg", data-mask="site/img/mainPolygonCenter.svg", data-img="http://localhost/iconos_2015/files/galeria/{{img}}", data-w="200", data-h="200").btn
+          
+          
+.galleryslider
+  .container
+    .col8.push1.gala
+      .slider.multiple
+        a(ng-repeat=" img in datos | filter:'exp' | limitTo:4 ", ng-init="$last ? updateSVG() : null", href="files/galeria/{{img}}", title="Exposiciones").box 
+          .svg(data="site/img/mainPolygon.svg", data-mask="site/img/mainPolygonCenter.svg", data-img="http://localhost/iconos_2015/files/galeria/{{img}}", data-w="200", data-h="200").btn
+    .col1
+      p.rotate Exposiciones
+  .container
+    .col8.push2.galb
+      .slider.multiple
+          a(ng-repeat=" img in datos | filter:'exp' ", ng-init="$last ? updateSVG() : null", ng-if="$index >=4", href="files/galeria/{{img}}", title="Exposiciones").box 
+            .svg(data="site/img/mainPolygon.svg", data-mask="site/img/mainPolygonCenter.svg", data-img="http://localhost/iconos_2015/files/galeria/{{img}}", data-w="200", data-h="200").btn
+          
+        
